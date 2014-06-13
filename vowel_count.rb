@@ -5,11 +5,12 @@
 # Do not count y as a vowel for this challenge.
 
 def vowel_count(str)
-  vowels = ["a", "e", "i", "o", "u"]
-  str = "All cows eat grass"
-  #iterate through the str and if any of 
-  #the elements in the string contain 
-  #any of the items from the vowels array,
-  #then count the number of vowels
-  #
+  str.downcase!
+  p str.count("a") + str.count("e") + str.count("i") + str.count("o") + str.count("u")s
 end
+
+str = "All cows eat grass"
+vowel_count(str)
+
+
+

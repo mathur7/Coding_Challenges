@@ -2,8 +2,10 @@
 
 def prime(array)
   array.each do |i|
-    if i%2 != 0
-      p i  
+    if i == 2
+      p i
+    elsif i%2 != 0
+      p i
     end
   end
 end
