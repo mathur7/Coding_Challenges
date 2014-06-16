@@ -2,16 +2,16 @@
 
 def prime(array)
   array.each do |i|
-    if i == 2
+    if i == 2 || i == 3 || i == 5 || i == 7 
       p i
-    elsif i%2 != 0
+    elsif i%2 != 0 && i%3 != 0 && i%5 != 0 && i%7 != 0
       p i
     end
   end
 end
 
-x = (2..100).to_a
-prime(x)
+array = (2..100).to_a
+prime(array)
 
 
 

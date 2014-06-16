@@ -6,7 +6,7 @@
 
 def vowel_count(str)
   str.downcase!
-  p str.count("a") + str.count("e") + str.count("i") + str.count("o") + str.count("u")s
+  p str.count("a") + str.count("e") + str.count("i") + str.count("o") + str.count("u")
 end
 
 str = "All cows eat grass"

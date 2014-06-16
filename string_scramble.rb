@@ -5,35 +5,29 @@
 
 # For example: if str1 is "rkqodlw" and str2 is "world" the output should return true.  
 
-# function StringScramble( str1, str2 ) {
-#   var output = '';
-#   for ( var i = 0; i < str2.length; i++ ) {
-#     var pattern = new RegExp( str2[i] );
-#     if ( str1.match( pattern ) && str1.match( pattern )[0] ) {
-#       output += str1.match( pattern )[0];
-#       str1 = str1.replace( str1.match( pattern )[0], '' );
-#     }
-#   }
-  
-#   return output == str2 ? true : false;
-# }
-
-def StringScramble(st1, st2)
-  result = ''
-  i = 0
-  for i in st2
-    i < st2.length
-    i += 1
-    pattern = new regEx(st2[i])
-    if st1.match(pattern) && st1.match(pattern)[0]
-      result += st1.match(pattern)[0]
-      st1 = st1.replace(st1.match(pattern)[0], '');
+def string_scramble(st1, st2)
+  st1 = st1.split("")
+  st2 = st2.split("")
+  if st1.length < st2.length
+    st1.each do |i|
+      if st2.include?(i)
+        st2.delete(i)
+      else
+        return false
+      end
+    end
+  else
+    st2.each do |i|
+      if st1.include?(i)
+        st1.delete(i)
+      else
+        return false
+      end
     end
   end
-  return result = st2 ? true : false
+  true
 end
 
-st1 = "kwaovrplmd"
+st1 = "rkqodlw"
 st2 = "world"
-p StringScramble(st1, st2)
-
+p string_scramble(st1, st2)
